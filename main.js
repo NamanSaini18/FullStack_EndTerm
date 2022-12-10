@@ -1,6 +1,6 @@
 function loadBook(filename, displayName) {
     let currentBook = "";
-    let url = "books/" + filename;
+    let url = ".books/" + filename;
 
     //reset our UI
     document.getElementById("fileName").innerHTML = displayName;

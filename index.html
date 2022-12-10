@@ -4,10 +4,112 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebD Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9664c8b16b.js"></script>
+    <title>JavaScript Playground</title>
 </head>
 <body>
+    <h1 style="color:indigo;"><center>JavaScript Playground</center></h1>
+    <div class="container">
+        <img src="images/BookImage.jpg" class="img">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <h2 class="card-header" id="fileName">Book Title</h2>
+                    <div class="card-body">
+                        <div class="Box scroll" id="fileContent">
+                            Select a book from Right
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--SideBar Content-->
+            <div class="col-md-4">
+                <div class="card my-4">
+                    <h5 class="card-header">Search here</h5>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="keyword" placeholder="Search here...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button" onclick="performMark()">Search</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="card-footer" id="searchstat">
 
+                    </div>
+                </div>
+
+                <div class="card my-4">
+                    <h5 class="card-header">Select a Book</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="#"
+                                            onclick="loadBook('AliceInWonderland.txt','Alice in Wonderland')">Alice in
+                                            Wonderland</a></li>
+                                    <li><a href="#" onclick="loadBook('LOTR.txt','Lord of the Rings')">Lord of the
+                                            Rings</a></li>
+                                    <li><a href="#" onclick="loadBook('JekyllAndHyde.txt','Dr Jekyll and Mr. Hyde')">Dr
+                                            Jekyll and Mr. Hyde</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card my-4">
+                    <h5 class="card-header">Most Used Words</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="list-unstyled mb-0" id="mostUsed">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card my-4">
+                    <h5 class="card-header">Least Used Words</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <ul class="list-unstyled mb-0" id="leastUsed">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card my-4">
+                    <h5 class="card-header">Document Stats</h5>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-0">
+                            <li id="docLength"></li>
+                            <li id="wordCount"></li>
+                            <li id="charCount"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="next-button" href="game.html">Next</a>
+
+        <script id="template-ul-items" type="text/template">
+            <li>
+               {{val}}
+            </li>    
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
     
+    <script src="main.js"></script>    
 </body>
 </html>
